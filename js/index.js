@@ -7,7 +7,7 @@ let snakeArr = [
 ]
 food = {x: 6,y: 7};
 let babyArr = [
-    {x: 10,y:13}
+    {x: 0,y:13}
 ]
 
 // Game functions 
@@ -45,7 +45,7 @@ function gameEngine(){
        inputDir =  {x: 0,y: 0};
        alert("Game Over. Press any key to play again!");
        snakeArr = [{x: 13,y: 15}];
-       babyArr = [{x: 10,y:13}];
+       babyArr = [{x: 0,y:13}];
        score = 0;
     }
 
@@ -59,8 +59,8 @@ function gameEngine(){
         }
         scoreBox.innerHTML = "Score:" + score;
         snakeArr.unshift({x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y});
-        babyArr.unshift({x: babyArr[0].x + inputDir.x, y: babyArr[0].y + inputDir.y});
-         
+        babyArr.unshift({ x: babyArr[0].x + 1, y: babyArr[0].y + 0 });
+
         let a = 2;
         let b = 16;
         food = {x: Math.round(a + (b-a)* Math.random()), y: Math.round(a + (b-a)* Math.random())}
