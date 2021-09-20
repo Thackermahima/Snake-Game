@@ -97,22 +97,14 @@ function gameEngine(){
 
   
     //Display the baby
-    babyArr.forEach((e,index)=>{
+   babyArr.forEach((e) => {
         babyElement = document.createElement('div');
         babyElement.style.gridRowStart = e.y;
-        babyElement.style.gridColumnStart = e.x; 
+        babyElement.style.gridColumnStart = e.x;
         babyElement.classList.add('baby');
-        if(index === 0){
-            babyElement.classList.add('baby');
-        }
         board.appendChild(babyElement);
     });
-   
-    
 }
- 
-
-  
 //main logic starts here
 let hiscore = localStorage.getItem("hiscore");
 if(hiscore === null){
